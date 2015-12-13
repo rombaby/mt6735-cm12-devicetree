@@ -1,0 +1,10 @@
+# ==============================================
+# MTK Policy Rule
+# ============
+
+allow servicemanager { gpsd init init_shell }:dir search;
+allow servicemanager { gpsd init init_shell }:file { read open };
+allow servicemanager { gpsd init init_shell }:process getattr;
+
+#init_daemon_domain(servicemanager)
+#unconfined_domain(servicemanager)
